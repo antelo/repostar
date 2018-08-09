@@ -21,7 +21,7 @@ angular.module('starter', [
     'dbaq.ionNumericKeyboard'
 ])
     .constant('CONFIG', {
-        APIURL: 'http://openyapi.servotal.com/'
+        APIURL: ''
     })
 
 .run(['$ionicPlatform', 'General', 'store', 'authService', '$rootScope', '$ionicLoading', 'pushService', 'billsService', function ($ionicPlatform, General, store, authService, $rootScope, $ionicLoading, pushService, billsService) {
@@ -128,7 +128,7 @@ angular.module('starter', [
             // This is a promise of a JWT id_token
             var refreshToken = store.get('refresh_token');
             return $http({
-                url: 'http://openyapi.servotal.com/oauth',
+                url: '',
                 // This makes it so that this request doesn't send the JWT
                 skipAuthorization: true,
                 method: 'POST',
